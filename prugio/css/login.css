@@ -1,0 +1,88 @@
+/* 헤더 */
+header {
+  width: 100%;
+  height: 170px;
+  background: url(../img/login/header_bg.JPG) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* 여기부터 section */
+section {
+  width: 1100px;
+  height: 800px;
+  margin: 0 auto;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 80px;
+}
+p {
+  text-align: center;
+  padding: 10px 0px 30px 0px;
+  color: #999999;
+}
+hr {
+  border: 0px;
+  height: 1px;
+  background: #dddddd;
+}
+form {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+form input::placeholder {
+  color: #aaaaaa;
+}
+form input {
+  width: 284px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid #cccccc;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+form input[type="button"] {
+  border: none;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  padding-left: 0px;
+  cursor: pointer;
+  width: 300px;
+}
+form input[id="login"] {
+  background: #015152;
+}
+form input[id="join"] {
+  background: #5a6770;
+  margin-top: 10px;
+}
+form input[id="find"] {
+  display: inline;
+  width: 148px;
+  background: none;
+  color: #999999;
+  font-weight: normal;
+  font-size: 14px;
+  position: relative;
+  left: 200px;
+  z-index: 2;
+}
+form p {
+  color: #999999;
+  position: relative;
+  right: 0px;
+  bottom: 50px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #dddddd;
+  z-index: 1;
+}
+form a {
+  cursor: pointer;
+}

@@ -1,0 +1,556 @@
+@import url(reset.css);
+* {
+  font-family: "Noto sans KR";
+}
+/* 여기부터 팝업 */
+.popup {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, #ffffff, #f8f8f8, #f5f4f2);
+  position: relative;
+}
+.popup > div {
+  width: fit-content;
+  margin: 0 auto;
+}
+.popup > p {
+  width: 70px;
+  height: 70px;
+  background-color: #555555;
+  background: url(../img/pop_close.png) no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+.popup > p:hover {
+  cursor: pointer;
+}
+/* 여기부터 비디오 */
+
+vidoe {
+  position: absolute;
+  top: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/* 여기부터 헤더 */
+header {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.header_top {
+  width: 1200px;
+  height: 80px;
+  z-index: 2;
+  position: absolute;
+}
+header h1 {
+  width: 150px;
+  height: 80px;
+  background: url(../img/logo.png) no-repeat;
+  background-position: center;
+  float: left;
+}
+header nav {
+  width: 1050px;
+  height: 80px;
+  float: left;
+}
+header nav > ul.left {
+  width: 800px;
+  height: 80px;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+header nav > ul.left > li {
+  float: left;
+  width: 130px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+header nav > ul.left > li > a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+}
+header nav > ul.right {
+  width: 250px;
+  height: 80px;
+  float: left;
+}
+header nav > ul.right > li {
+  float: left;
+  width: fit-content;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  padding: 0px 10px;
+}
+header nav > ul.right > li button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background: none;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+header nav > ul.right > li button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+header nav > ul.right > li:nth-child(2) {
+  padding-top: 3px;
+}
+header nav > ul.right > li:nth-child(3) {
+  padding-top: 15px;
+}
+
+/* 여기부터 섹션 컨텐츠1*/
+section > .content1_bg {
+  width: 100%;
+  height: 900px;
+  background: url(../img/bg_sec1.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+section > .content1_bg > .p_1 {
+  position: absolute;
+  bottom: 400px;
+  left: 0px;
+  animation-name: circle_1;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+@keyframes circle_1 {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 450px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+section > .content1_bg > .p_2 {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  animation-name: circle_2;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+@keyframes circle_2 {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: 400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+section > .content1_bg > .content1 {
+  width: 1100px;
+  height: 450px;
+  padding-top: 225px;
+  margin: 0 auto;
+}
+.content1 > .left {
+  width: 500px;
+  height: 450px;
+  float: left;
+  position: relative;
+}
+.content1 > .left > ul > li {
+  margin: 0px 10px 35px 10px;
+  position: relative;
+}
+.content1 > .left > ul > li > a {
+  font: bold 30px "견고딕";
+  color: #ffffff;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 21;
+}
+.content1 > .left > ul > li > p {
+  width: 0px;
+  height: 10px;
+  background: #015152;
+  position: absolute;
+  top: 32px;
+  left: 0px;
+  transition: 0.5s;
+  z-index: 20;
+}
+.content1 > .left > ul > li:nth-child(1):hover p {
+  width: 380px;
+}
+.content1 > .left > ul > li:nth-child(2):hover p {
+  width: 350px;
+}
+.content1 > .left > ul > li:nth-child(3):hover p {
+  width: 406px;
+}
+.content1 > .left > ul > li:nth-child(4):hover p {
+  width: 380px;
+}
+.content1 > .left > ul > li:nth-child(5):hover p {
+  width: 312px;
+}
+.content1 > .left > p {
+  background: url(../img/f.png) no-repeat;
+  background-size: contain;
+  background-position: 130px;
+}
+.content1 > .left > p > a {
+  font: normal 15px "견고딕";
+  color: #ffffff;
+  letter-spacing: -1px;
+  padding-left: 10px;
+}
+
+.content1 > .right {
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(#ffffff, #cccccc);
+  float: right;
+  position: relative;
+  box-shadow: 15px 30px 50px 0px rgba(0, 0, 0, 0.3);
+}
+.content1 > .right > p {
+  color: #015152;
+  font: bold 20px "견고딕";
+  letter-spacing: 20px;
+  line-height: 50px;
+  position: absolute;
+  top: 100px;
+  left: 60px;
+}
+.content1 > .right > button {
+  width: 180px;
+  height: 40px;
+  background: black;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  top: 270px;
+  left: 60px;
+}
+.content1 > .right > button:hover {
+  background: #015152;
+  cursor: pointer;
+}
+.content1 > .right > img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/* 여기부터 애니메이션 로고 */
+.ani_logo {
+  width: 156px;
+  height: 156px;
+  border-radius: 100%;
+  background: url(../img/center_img.png) no-repeat;
+  background-position: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 50px;
+  left: 470px;
+}
+.ani_logo > img {
+  animation-name: logo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 1, 1, 1);
+}
+@keyframes logo {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  여기부터 중간 배너 */
+section > .banner {
+  width: 100%;
+  height: 300px;
+  background: #015152;
+}
+section > .banner > p:nth-child(1) {
+  width: 100%;
+  text-align: center;
+  font: bold 38px "맑은 고딕";
+  color: #cedbdb;
+  padding-top: 100px;
+}
+section > .banner > p:nth-child(2) {
+  width: 100%;
+  text-align: center;
+  font: normal 16px "맑은 고딕";
+  color: #cedbdb;
+  padding-top: 10px;
+}
+
+/* 여기부터 섹션 컨텐츠2 */
+section > .content2 {
+  width: 100%;
+  height: 400px;
+  background: #999999;
+}
+.content2 > ul {
+  width: 100%;
+  height: 100%;
+  background: olive;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.content2 > ul > li {
+  width: 50%;
+  height: 100%;
+  float: left;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.content2 > ul > li:nth-child(1) {
+  background: url(../img/001.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.content2 > ul > li:nth-child(2) {
+  background: url(../img/002.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content2 > ul > li > p {
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 26px;
+  letter-spacing: -1px;
+  margin: 100px 0px 0px 80px;
+}
+.content2 > ul > li > p:last-child {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 80px;
+  background: url(../img/f.png) no-repeat;
+  background-size: 40px;
+  background-position: 100px;
+  margin: 0px 100px;
+}
+.content2 > ul > li:last-child > p:last-child {
+  background-position: 20px;
+}
+
+/* 여기부터 섹션 컨텐츠3 */
+section > .content3 {
+  width: 100%;
+  height: 620px;
+  background: #ffffff;
+}
+.content3 > ul {
+  width: 1100px;
+  height: 300px;
+  margin: 0 auto;
+}
+.content3 > ul > li {
+  width: 230px;
+  height: 200px;
+  float: left;
+  margin: 100px 60px 0px 0px;
+}
+.content3 > ul > li:last-child {
+  margin-right: 0px;
+}
+.content3 > ul > li > a > p:nth-child(1) {
+  font: bold 22px "고딕";
+}
+.content3 > ul > li > a > p:nth-child(2) {
+  width: 100%;
+  height: 6px;
+  background: black;
+  margin-top: 20px;
+}
+.content3 > ul > li > a > p:nth-child(3) {
+  margin-top: 20px;
+  color: #777777;
+}
+
+.content3 div.news {
+  width: 1100px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: royalblue;
+  background: url(../img/ff.png) no-repeat;
+  background-size: 40px;
+  background-position: 170px 0px;
+}
+.content3 div.life {
+  width: 110opx;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: url(../img/lifestyle_img.jpg) no-repeat;
+}
+.content3 div.life:hover {
+  cursor: pointer;
+}
+
+/* 여기부터 푸터 */
+footer {
+  width: 100%;
+  height: 160px;
+  background: #5a6770;
+}
+footer > .foot_wrap {
+  width: 1100px;
+  height: 150px;
+  margin: 0 auto;
+}
+.foot_wrap > ul.foot_logo {
+  width: 250px;
+  height: 150px;
+  float: left;
+}
+.foot_wrap > ul.foot_logo > li {
+  float: left;
+  width: 33px;
+  height: 33px;
+  margin-top: 20px;
+}
+.foot_wrap > ul.foot_logo > li:nth-child(1) {
+  width: 250px;
+  height: 80px;
+  background: url(../img/logo_footer.png) no-repeat;
+  background-position: left;
+  float: left;
+  margin-top: 0px;
+}
+.foot_wrap > ul.foot_logo > li:nth-child(2) {
+  background: url(../img/footer_logo01.png) no-repeat;
+}
+.foot_wrap > ul.foot_logo > li:nth-child(3) {
+  background: url(../img/footer_logo02.png) no-repeat;
+}
+.foot_wrap > ul.foot_logo > li:nth-child(4) {
+  background: url(../img/footer_logo03.png) no-repeat;
+  width: 60px;
+}
+.foot_wrap > ul.foot_logo > li:nth-child(5) {
+  background: url(../img/footer_logo04.png) no-repeat;
+  width: 60px;
+}
+
+.foot_wrap > div.top > ul.left {
+  width: 450px;
+  height: 70px;
+  float: left;
+}
+.foot_wrap > div.top > ul.left > li {
+  float: left;
+  width: fit-content;
+  height: 70px;
+  line-height: 70px;
+  padding: 0px 20px 0px 0px;
+}
+.foot_wrap > div.top > ul.left > li > a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #cccccc;
+}
+.foot_wrap > div.top > ul.right {
+  width: 400px;
+  height: 70px;
+  float: left;
+}
+.foot_wrap > div.top > ul.right > li {
+  float: right;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  border: 1px solid #888888;
+  margin: 15px 0px 0px 10px;
+}
+.foot_wrap > div.top > ul.right > li > a {
+  font: bold 14px "바탕";
+  color: #cccccc;
+  padding: 0px 10px;
+}
+.foot_wrap > div.top > ul.right > li:hover {
+  cursor: pointer;
+}
+
+.foot_wrap > div.top > ul.right > li:nth-child(1) {
+  background: url(../img/daewoo_bi.png) no-repeat;
+  background-position: 10px;
+}
+.foot_wrap > div.top > ul.right > li:nth-child(2) {
+  background: url(../img/summit_bi.png) no-repeat;
+  background-position: 10px;
+}
+.foot_wrap > div.bottom {
+  width: 850px;
+  height: 90px;
+  border-top: 1px solid #888888;
+  float: left;
+}
+.foot_wrap > div.bottom > ul.left {
+  width: 700px;
+  height: 70px;
+  float: left;
+  margin-top: 20px;
+}
+.foot_wrap > div.bottom > ul.left > li {
+  font-size: 13px;
+  font-weight: bold;
+  color: #cccccc;
+}
+.foot_wrap > div.bottom > ul.left > li:nth-child(2) {
+  font-size: 12px;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.foot_wrap > div.bottom > ul.right {
+  width: 150px;
+  height: 70px;
+  float: left;
+  margin-top: 10px;
+}
+
+.foot_wrap > div.bottom > ul.right > li {
+  font: bold 18px "맑은 고딕";
+  color: #cccccc;
+  width: 200px;
+  height: 30px;
+  float: right;
+  text-align: right;
+}
+
+.foot_wrap > div.bottom > ul.right > li:nth-child(2) {
+  width: 50px;
+}
+.foot_wrap > div.bottom > ul.right > li:nth-child(3) {
+  width: 30px;
+}
+.foot_wrap > div.bottom > ul.right > li:nth-child(4) {
+  width: 50px;
+}
