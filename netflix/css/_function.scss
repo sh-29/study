@@ -1,0 +1,8 @@
+@function vw1220($px){
+  $vwSize : $px / 12.2;
+  @return #{$vwSize}vw;
+}
+@function vw740($px){
+  $vwSize : $px / 7.4;
+  @return #{$vwSize}vw;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        background: linear-gradient(#ccc, #fff);
+      }
+      .wrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .banner img {
+        width: 80vh;
+      }
+      .banner {
+        padding-bottom: 2vh;
+      }
+      .line {
+        width: 130vh;
+        border-bottom: 2px dashed #999;
+      }
+      .coupon_wrap {
+        width: 120vh;
+        display: flex;
+      }
+      .coupon {
+        padding-top: 2vh;
+        width: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .coupon img {
+        width: 24vh;
+        margin-right: 4vh;
+      }
+      .last {
+        width: 50vh;
+        margin-top: 2vh;
+      }
+      .c6 {
+        margin-top: 2vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="banner">
+        <li><img src="images/banner1.jpg" alt="" /></li>
+        <li><img src="images/banner2.jpg" alt="" /></li>
+        <li><img src="images/banner3.jpg" alt="" /></li>
+        <li><img src="images/banner4.jpg" alt="" /></li>
+      </ul>
+      <div class="line"></div>
+      <div class="coupon_wrap">
+        <ul class="coupon">
+          <li><img src="images/coupon1.png" alt="" /></li>
+          <li><img src="images/coupon2.png" alt="" /></li>
+          <li><img src="images/coupon3.png" alt="" /></li>
+          <li><img src="images/coupon4.png" alt="" /></li>
+          <li><img class="c6" src="images/coupon5.png" alt="" /></li>
+        </ul>
+        <img class="last" src="images/coupon6.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
