@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/slider.js"></script>
   </head>
   <body>
     <!-- 반복영역 건너뛰기 링크 -->
@@ -44,132 +47,299 @@
           </div>
         </div>
         <h1 class="logo"></h1>
-        <nav class="gnb">
-          <ul class="main_menu">
+        <nav id="gnb">
+          <ul class="main_menu ">
             <li>
-              <a href=""
-                >가구
-                <ul class="sub_menu"></ul>
-              </a>
+              <a class="menu1" href="">가구</a>
             </li>
             <li>
-              <a href=""
+              <a class="menu2" href=""
                 >패브릭
-                <ul class="sub_menu"></ul>
               </a>
+              <ul class="sub_menu_dep1 sub2">
+                <li>
+                  <p>침대/매트리스</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">침대</a></li>
+                    <li><a href="">매트리스</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>소파</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">가죽소파</a></li>
+                      <li><a href="">패브릭소파</a></li>
+                      <li><a href="">신소재소파</a></li>
+                      <li><a href="">좌식소파</a></li>
+                      <li><a href="">소파베드</a></li>
+                      <li><a href="">리클라이너소파</a></li>
+                      <li><a href="">빈백</a></li>
+                      <li><a href="">소파스툴</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>테이블</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">거실테이블</a></li>
+                      <li><a href="">리프트테이블</a></li>
+                      <li><a href="">협탁/사이드테이블</a></li>
+                      <li><a href="">접이식테이블</a></li>
+                      <li><a href="">바테이블</a></li>
+                      <li><a href="">침대테이블</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>화장대/거울</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">화장대</a></li>
+                    <li><a href="">거울</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>드레스룸</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">드레스룸</a></li>
+                    <li><a href="">행거</a></li>
+                    <li><a href="">붙박이장</a></li>
+                    <li><a href="">옷장</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>거실장/서랍장/선반</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">TV거실장</a></li>
+                    <li><a href="">높은거실장</a></li>
+                    <li><a href="">진열장/장식장</a></li>
+                    <li><a href="">서랍장</a></li>
+                    <li><a href="">수납장</a></li>
+                    <li><a href="">선반</a></li>
+                    <li><a href="">신발장</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>식탁/주방수납</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">식탁</a></li>
+                    <li><a href="">홈바/아일랜드</a></li>
+                    <li><a href="">렌지대</a></li>
+                    <li><a href="">주방수납</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>책상/책장</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">책상</a></li>
+                    <li><a href="">책장</a></li>
+                    <li><a href="">오피스수납</a></li>
+                    <li><a href="">파티션</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>의자</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">일반의자</a></li>
+                    <li><a href="">좌식의자</a></li>
+                    <li><a href="">접이식의자</a></li>
+                    <li><a href="">사무용/게이밍의자</a></li>
+                    <li><a href="">안락/흔들의자</a></li>
+                    <li><a href="">스툴</a></li>
+                    <li><a href="">식탁의자</a></li>
+                    <li><a href="">바체어</a></li>
+                    <li><a href="">벤치</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>유아/아동가구</p>
+                  <ul class="sub_menu_dep2">
+                    <li><a href="">유아동침대</a></li>
+                    <li><a href="">유아동의자</a></li>
+                    <li><a href="">유아동책상/책장</a></li>
+                    <li><a href="">유아동수납장</a></li>
+                    <li><a href="">유아동매트</a></li>
+                    <li><a href="">유아동텐트</a></li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <a href=""
                 >조명
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >주방
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >수납/정리
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >가전
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >홈데코
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >생활용품
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >셀프인테리어
-                <ul class="sub_menu"></ul>
               </a>
             </li>
             <li>
               <a href=""
                 >반려동물
-                <ul class="sub_menu"></ul>
               </a>
             </li>
           </ul>
+          
         </nav>
+        <div class="shadow"></div>
       </div>
     </header>
 
     <!-- slider -->
-    <section class="slider_wrap">
-      <ul class="slider">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+    <section id="slider1" class="slider_wrap">
+      <ul class="slider" id="visualItems">
+        <li class="blue active" >
+          <a href=""><img src="img/slider3.jpeg" alt="" /></a>
+        </li>
+        <li class="coral" id="item1"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="3개의 슬라이드 1">
+          <a href=""><img src="img/slider1.jpeg" alt="" /></a>
+        </li>
+        <li class="green" id="item2"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="3개의 슬라이드 2">
+          <a href=""><img src="img/slider2.jpeg" alt="" /></a>
+        </li>
+        <li class="blue active" id="item3"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="3개의 슬라이드 3">
+          <a href=""><img src="img/slider3.jpeg" alt="" /></a>
+        </liclass=active>
       </ul>
+
+      <div class="control">
+        <!-- <div class="play_pause">
+          <button class="play" type="button" aria-label="애니메이션 시작">
+            <img src="images/play-circle-solid.svg" alt="" />
+          </button>
+          <button class="pause" type="button" aria-label="애니메이션 일시정지">
+            <img src="images/pause-circle-solid.svg" alt="" />
+          </button>
+        </div> -->
+        <div class="prev_next sec_wrap">
+          <button
+            class="prev"
+            type="button"
+            aria-label="이전 슬라이드"
+            aria-controls="visualItems"
+          ><span></span>
+          </button>
+          <button
+            class="next"
+            type="button"
+            aria-label="다음 슬라이드"
+            aria-controls="visualItems"
+          ><span></span>
+          </button>
+        </div>
+        <ul class="pagination">
+          <li>
+            <button type="button" aria-label="" aria-controls="item1"></button>
+          </li>
+          <li>
+            <button type="button" aria-label="" aria-controls="item2"></button>
+          </li>
+          <li>
+            <button type="button" aria-label="" aria-controls="item3"></button>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- section1 -->
     <section id="section1" class="sec_wrap">
-      <h2>나도 예쁘게 살고 싶어~</h2>
-      <p>예쁘게 사는 법, 어떤 방법으로 찾고 계신가요?</p>
+      <h2>
+        나도 예쁘게 살고 싶어~<br /><span
+          >예쁘게 사는 법, 어떤 방법으로 찾고 계신가요?</span
+        >
+      </h2>
       <div class="content">
         <ul>
-          <li><a href="">이웃집소개</a></li>
-          <li><a href="">베스트</a></li>
-          <li><a href="">카테고리</a></li>
-          <li><a href="">인테리어팁</a></li>
-          <li><a href="">공간별사진</a></li>
+          <li>
+            <p>이웃집소개</p>
+            <a href=""></a>
+          </li>
+          <li>
+            <p>베스트</p>
+            <a href=""></a>
+          </li>
+          <li>
+            <p>카테고리</p>
+            <a href=""></a>
+          </li>
+          <li>
+            <p>인테리어팁</p>
+            <a href=""></a>
+          </li>
+          <li>
+            <p>공간별사진</p>
+            <a href=""></a>
+          </li>
         </ul>
       </div>
     </section>
 
     <!-- section2 -->
     <section id="section2" class="sec_wrap">
-      <h2>집꾸미기 베스트6</h2>
+      <h2>집꾸미기 베스트</h2>
       <div id="main_tab1" class="tab_cnt">
         <ul role="tablist" class="tab_list" aria-label="카테고리별 베스트 상품">
           <li role="tab" aria-controls="tabpanel1" id="tab1" class="tab first">
-            <a href=""></a>
+            가구
           </li>
           <li role="tab" aria-controls="tabpanel2" id="tab2" class="tab">
-            <a href=""></a>
+            패브릭
           </li>
           <li role="tab" aria-controls="tabpanel3" id="tab3" class="tab">
-            <a href=""></a>
+            조명
           </li>
           <li role="tab" aria-controls="tabpanel4" id="tab4" class="tab">
-            <a href=""></a>
+            주방
           </li>
           <li role="tab" aria-controls="tabpanel5" id="tab5" class="tab">
-            <a href=""></a>
+            수납/정리
           </li>
           <li role="tab" aria-controls="tabpanel6" id="tab6" class="tab">
-            <a href=""></a>
+            가전
           </li>
           <li role="tab" aria-controls="tabpanel7" id="tab7" class="tab">
-            <a href=""></a>
+            홈데코
           </li>
           <li role="tab" aria-controls="tabpanel8" id="tab8" class="tab">
-            <a href=""></a>
+            생활용품
           </li>
           <li role="tab" aria-controls="tabpanel9" id="tab9" class="tab">
-            <a href=""></a>
+            셀프인테리어
           </li>
           <li role="tab" aria-controls="tabpanel10" id="tab10" class="tab last">
-            <a href=""></a>
+            반려동물
           </li>
         </ul>
 
@@ -177,175 +347,1158 @@
           role="tabpanel"
           aria-labelledby="tab1"
           id="tabpanel1"
-          class="tabpane"
-        ></div>
+          class="tabpanel first"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[크렌시아]</p>
+                  <span>
+                    아너스 LED 스탠다드 일반/서랍 침대 SS/Q [매트 무료
+                    업그레이드] </span
+                  ><br /><i>48%</i><b> 109,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>워너비 3인용 컵홀더 접이식 소파베드 </span><br />
+                  <i>47%</i><b> 159,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span>다락 빅 수납침대 SS/Q (논슬립패드 2EA증정)</span
+                  ><br /><i>66%</i><b> 219,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>접이식 원목 매트리스 깔판 프레임</span><br /><i>63%</i
+                  ><b> 32,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[더릭스홈]</p>
+                  <span>기절 마약매트리스 침대 접이식 바닥 토퍼 (MS/SS/Q)</span
+                  ><br /><i>76%</i><b> 28,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span
+                    >[E0 등급] 플레인 다용도 거실 수납장 (일반형/높은형)</span
+                  ><br /><i>58%</i><b> 79,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[블루밍홈]</p>
+                  <span>테트리스 수납 컴퓨터 책상</span><br /><i>17%</i
+                  ><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[리샘가구]</p>
+                  <span>큐브 책상형 올인원 멀티 수납침대 SS</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>멜로우 초대형 와이드 전신거울</span><br /><i>60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab2"
           id="tabpanel2"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>코지베어 먼지없는 차렵이불 단품 및 세트 S/SS/Q/K </span
+                  ><br /><i>59%</i><b> 24,570원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>호텔식 고밀도 바이오워싱 차렵이불 13종</span><br />
+                  <i>31%</i><b> 61,800원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 리버서블 차렵이불(SS/Q) 17종</span><br /><i
+                    >41%</i
+                  ><b> 29,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아리랑디앤씨]</p>
+                  <span>타일카페트</span><br /><i>22%</i><b> 3,120원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아르페지오]</p>
+                  <span
+                    >메이딘 호텔식 이불/베개/매트/패드 커버 모음 (10color)</span
+                  ><br /><i>77%</i><b> 16,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span
+                    >토파즈 고밀도 워싱 순면 60수 차렵이불 단품/세트
+                    SS/Q/K/</span
+                  ><br /><i>63%</i><b> 44,100원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 완벽 빛차단 암막커튼 1+1(쉐이드, 메이든)</span
+                  ><br /><i>17%</i><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>토파즈 고밀도 워싱 순면 60수 이불</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[헬로우슬립]</p>
+                  <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                    >60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab3"
           id="tabpanel3"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[크렌시아]</p>
+                  <span>
+                    아너스 LED 스탠다드 일반/서랍 침대 SS/Q [매트 무료
+                    업그레이드] </span
+                  ><br /><i>48%</i><b> 109,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>워너비 3인용 컵홀더 접이식 소파베드 </span><br />
+                  <i>47%</i><b> 159,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span>다락 빅 수납침대 SS/Q (논슬립패드 2EA증정)</span
+                  ><br /><i>66%</i><b> 219,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>접이식 원목 매트리스 깔판 프레임</span><br /><i>63%</i
+                  ><b> 32,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[더릭스홈]</p>
+                  <span>기절 마약매트리스 침대 접이식 바닥 토퍼 (MS/SS/Q)</span
+                  ><br /><i>76%</i><b> 28,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span
+                    >[E0 등급] 플레인 다용도 거실 수납장 (일반형/높은형)</span
+                  ><br /><i>58%</i><b> 79,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[블루밍홈]</p>
+                  <span>테트리스 수납 컴퓨터 책상</span><br /><i>17%</i
+                  ><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[리샘가구]</p>
+                  <span>큐브 책상형 올인원 멀티 수납침대 SS</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>멜로우 초대형 와이드 전신거울</span><br /><i>60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab4"
           id="tabpanel4"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>코지베어 먼지없는 차렵이불 단품 및 세트 S/SS/Q/K </span
+                  ><br /><i>59%</i><b> 24,570원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>호텔식 고밀도 바이오워싱 차렵이불 13종</span><br />
+                  <i>31%</i><b> 61,800원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 리버서블 차렵이불(SS/Q) 17종</span><br /><i
+                    >41%</i
+                  ><b> 29,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아리랑디앤씨]</p>
+                  <span>타일카페트</span><br /><i>22%</i><b> 3,120원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아르페지오]</p>
+                  <span
+                    >메이딘 호텔식 이불/베개/매트/패드 커버 모음 (10color)</span
+                  ><br /><i>77%</i><b> 16,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span
+                    >토파즈 고밀도 워싱 순면 60수 차렵이불 단품/세트
+                    SS/Q/K/</span
+                  ><br /><i>63%</i><b> 44,100원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 완벽 빛차단 암막커튼 1+1(쉐이드, 메이든)</span
+                  ><br /><i>17%</i><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>토파즈 고밀도 워싱 순면 60수 이불</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[헬로우슬립]</p>
+                  <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                    >60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab5"
           id="tabpanel5"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[크렌시아]</p>
+                  <span>
+                    아너스 LED 스탠다드 일반/서랍 침대 SS/Q [매트 무료
+                    업그레이드] </span
+                  ><br /><i>48%</i><b> 109,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>워너비 3인용 컵홀더 접이식 소파베드 </span><br />
+                  <i>47%</i><b> 159,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span>다락 빅 수납침대 SS/Q (논슬립패드 2EA증정)</span
+                  ><br /><i>66%</i><b> 219,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>접이식 원목 매트리스 깔판 프레임</span><br /><i>63%</i
+                  ><b> 32,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[더릭스홈]</p>
+                  <span>기절 마약매트리스 침대 접이식 바닥 토퍼 (MS/SS/Q)</span
+                  ><br /><i>76%</i><b> 28,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span
+                    >[E0 등급] 플레인 다용도 거실 수납장 (일반형/높은형)</span
+                  ><br /><i>58%</i><b> 79,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[블루밍홈]</p>
+                  <span>테트리스 수납 컴퓨터 책상</span><br /><i>17%</i
+                  ><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[리샘가구]</p>
+                  <span>큐브 책상형 올인원 멀티 수납침대 SS</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>멜로우 초대형 와이드 전신거울</span><br /><i>60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab6"
           id="tabpanel6"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>코지베어 먼지없는 차렵이불 단품 및 세트 S/SS/Q/K </span
+                  ><br /><i>59%</i><b> 24,570원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>호텔식 고밀도 바이오워싱 차렵이불 13종</span><br />
+                  <i>31%</i><b> 61,800원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 리버서블 차렵이불(SS/Q) 17종</span><br /><i
+                    >41%</i
+                  ><b> 29,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아리랑디앤씨]</p>
+                  <span>타일카페트</span><br /><i>22%</i><b> 3,120원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아르페지오]</p>
+                  <span
+                    >메이딘 호텔식 이불/베개/매트/패드 커버 모음 (10color)</span
+                  ><br /><i>77%</i><b> 16,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span
+                    >토파즈 고밀도 워싱 순면 60수 차렵이불 단품/세트
+                    SS/Q/K/</span
+                  ><br /><i>63%</i><b> 44,100원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 완벽 빛차단 암막커튼 1+1(쉐이드, 메이든)</span
+                  ><br /><i>17%</i><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>토파즈 고밀도 워싱 순면 60수 이불</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[헬로우슬립]</p>
+                  <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                    >60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab7"
           id="tabpanel7"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[크렌시아]</p>
+                  <span>
+                    아너스 LED 스탠다드 일반/서랍 침대 SS/Q [매트 무료
+                    업그레이드] </span
+                  ><br /><i>48%</i><b> 109,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>워너비 3인용 컵홀더 접이식 소파베드 </span><br />
+                  <i>47%</i><b> 159,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span>다락 빅 수납침대 SS/Q (논슬립패드 2EA증정)</span
+                  ><br /><i>66%</i><b> 219,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>접이식 원목 매트리스 깔판 프레임</span><br /><i>63%</i
+                  ><b> 32,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[더릭스홈]</p>
+                  <span>기절 마약매트리스 침대 접이식 바닥 토퍼 (MS/SS/Q)</span
+                  ><br /><i>76%</i><b> 28,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span
+                    >[E0 등급] 플레인 다용도 거실 수납장 (일반형/높은형)</span
+                  ><br /><i>58%</i><b> 79,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[블루밍홈]</p>
+                  <span>테트리스 수납 컴퓨터 책상</span><br /><i>17%</i
+                  ><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[리샘가구]</p>
+                  <span>큐브 책상형 올인원 멀티 수납침대 SS</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>멜로우 초대형 와이드 전신거울</span><br /><i>60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab8"
           id="tabpanel8"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>코지베어 먼지없는 차렵이불 단품 및 세트 S/SS/Q/K </span
+                  ><br /><i>59%</i><b> 24,570원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>호텔식 고밀도 바이오워싱 차렵이불 13종</span><br />
+                  <i>31%</i><b> 61,800원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 리버서블 차렵이불(SS/Q) 17종</span><br /><i
+                    >41%</i
+                  ><b> 29,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아리랑디앤씨]</p>
+                  <span>타일카페트</span><br /><i>22%</i><b> 3,120원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아르페지오]</p>
+                  <span
+                    >메이딘 호텔식 이불/베개/매트/패드 커버 모음 (10color)</span
+                  ><br /><i>77%</i><b> 16,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span
+                    >토파즈 고밀도 워싱 순면 60수 차렵이불 단품/세트
+                    SS/Q/K/</span
+                  ><br /><i>63%</i><b> 44,100원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 완벽 빛차단 암막커튼 1+1(쉐이드, 메이든)</span
+                  ><br /><i>17%</i><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>토파즈 고밀도 워싱 순면 60수 이불</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[헬로우슬립]</p>
+                  <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                    >60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab9"
           id="tabpanel9"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[크렌시아]</p>
+                  <span>
+                    아너스 LED 스탠다드 일반/서랍 침대 SS/Q [매트 무료
+                    업그레이드] </span
+                  ><br /><i>48%</i><b> 109,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>워너비 3인용 컵홀더 접이식 소파베드 </span><br />
+                  <i>47%</i><b> 159,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span>다락 빅 수납침대 SS/Q (논슬립패드 2EA증정)</span
+                  ><br /><i>66%</i><b> 219,000원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>접이식 원목 매트리스 깔판 프레임</span><br /><i>63%</i
+                  ><b> 32,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[더릭스홈]</p>
+                  <span>기절 마약매트리스 침대 접이식 바닥 토퍼 (MS/SS/Q)</span
+                  ><br /><i>76%</i><b> 28,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[포더홈]</p>
+                  <span
+                    >[E0 등급] 플레인 다용도 거실 수납장 (일반형/높은형)</span
+                  ><br /><i>58%</i><b> 79,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[블루밍홈]</p>
+                  <span>테트리스 수납 컴퓨터 책상</span><br /><i>17%</i
+                  ><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[리샘가구]</p>
+                  <span>큐브 책상형 올인원 멀티 수납침대 SS</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab1_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[삼익가구]</p>
+                  <span>멜로우 초대형 와이드 전신거울</span><br /><i>60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div
           role="tabpanel"
           aria-labelledby="tab10"
           id="tabpanel10"
-          class="tabpane"
-        ></div>
+          class="tabpanel"
+        >
+          <p></p>
+          <ul class="list">
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_1.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>코지베어 먼지없는 차렵이불 단품 및 세트 S/SS/Q/K </span
+                  ><br /><i>59%</i><b> 24,570원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_2.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>호텔식 고밀도 바이오워싱 차렵이불 13종</span><br />
+                  <i>31%</i><b> 61,800원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_3.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 리버서블 차렵이불(SS/Q) 17종</span><br /><i
+                    >41%</i
+                  ><b> 29,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_4.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아리랑디앤씨]</p>
+                  <span>타일카페트</span><br /><i>22%</i><b> 3,120원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_5.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[아르페지오]</p>
+                  <span
+                    >메이딘 호텔식 이불/베개/매트/패드 커버 모음 (10color)</span
+                  ><br /><i>77%</i><b> 16,900원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_6.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span
+                    >토파즈 고밀도 워싱 순면 60수 차렵이불 단품/세트
+                    SS/Q/K/</span
+                  ><br /><i>63%</i><b> 44,100원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_7.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[스타일링홈]</p>
+                  <span>먼지없는 완벽 빛차단 암막커튼 1+1(쉐이드, 메이든)</span
+                  ><br /><i>17%</i><b> 99,500원</b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_8.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[플로라]</p>
+                  <span>토파즈 고밀도 워싱 순면 60수 이불</span><br />
+                  <i>62%</i><b> 229,000원 </b>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+                <div class="txt_box">
+                  <p>[헬로우슬립]</p>
+                  <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                    >60%</i
+                  ><b> 27,900원</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- banner -->
     <section id="mid_banner" class="sec_full">
-      <div class="wrap1140"><p class="banner_img"></p></div>
+      <div class="wrap1140">
+        <a href="">
+          <p class="banner_img"></p>
+        </a>
+      </div>
     </section>
 
     <!-- section3 -->
     <section id="section3" class="sec_wrap">
       <h2>단독 인기 세일 상품</h2>
-      <ul class="product_list">
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <div class="txt_box">
-              <p class="brand"></p>
-              <p class="tit"></p>
-              <p class="price"></p>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <div class="list_wrap">
+        <ul class="list">
+          <li>
+            <a href="">
+              <figure><img src="img/section3-1.gif" alt="" /></figure>
+              <div class="txt_box">
+                <p>트루베퍼니처</p>
+                <span>밀리 LED조명 확장형 화장대 3단 수납침대 358,000 원 </span
+                ><br /><i>59%</i><b> 24,570원</b>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure><img src="img/section3-2.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>보토</p>
+                <span>쿡에어 조그셔틀 10L 대용량 에어프라이어 CAJ10L</span><br />
+                <i>31%</i><b> 61,800원</b>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure><img src="img/section3-3.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>코지테이블</p>
+                <span>[단독특가] 스톤 점박이 패턴 예쁜 그릇 머그컵</span><br /><i
+                  >41%</i
+                ><b> 29,500원</b>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure><img src="img/section3-4.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>코코도르</p>
+                <span
+                  >와이어 화병 + 리필액 200ml + 스틱5P + 골드트레이 (조화 증정)</span
+                ><br /><i>77%</i><b> 16,900원</b>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a href="">
+              <figure><img src="img/section3-5.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>리샘가구</p>
+                <span
+                  >클랜트 리프트업 다용도 테이블 800 / 1200</span
+                ><br /><i>63%</i><b> 44,100원</b>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure><img src="img/section3-6.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>레이디가구</p>
+                <span>각설탕 발수패브릭 모듈형 소파베드 (밀림방지패드)</span
+                ><br /><i>17%</i><b> 99,500원</b>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure><img src="img/section3-7.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>헤리터</p>
+                <span>[한정수량+단톡특가] 시그니처 팔각도마</span><br />
+                <i>62%</i><b> 229,000원 </b>
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a href="">
+              <figure><img src="img/tab2_9.jpg" alt="" /></figure>
+              <div class="txt_box">
+                <p>[헬로우슬립]</p>
+                <span>먼지없는 프릴 사계절 차렵이불(SS/Q)-</span><br /><i
+                  >60%</i
+                ><b> 27,900원</b>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="prev_next">
+          <button
+            class="prev"
+            type="button"
+            aria-label="이전 슬라이드"
+            aria-controls="visualItems"
+          ><span></span>
+          </button>
+          <button
+            class="next"
+            type="button"
+            aria-label="다음 슬라이드"
+            aria-controls="visualItems"
+          ><span></span>
+          </button>
+        </div>
     </section>
 
     <!-- section4 -->
@@ -479,38 +1632,47 @@
     <!-- footer -->
     <footer>
       <div class="top_foot wrap1140">
-        <div class="news">
-          <p><span>집꾸미기 소식</span></p>
-          <ul>
-            <li><a href="">2021년 설 연휴 안내</a></li>
-            <li><a href="">2020년 추석 연휴 안내</a></li>
-            <li>
-              <a href="">개인정보 유출 관련 추가 업데이트 (2020.05.21)</a>
-            </li>
-            <li><a href="">개인정보 유출 관련해서 사과드립니다.</a></li>
-            <li><a href="">구매확정 안내</a></li>
-            <li><a href="">적립금, 쿠폰 사용 안내</a></li>
-            <li><a href="">증빙서류 발급 안내</a></li>
-            <li><a href="">가구 배송 안내</a></li>
-            <li><a href="">배송비 안내</a></li>
-            <li><a href="">교환, 반품 방법 안내</a></li>
-            <li><a href="">배송상태 및 취소,변경 안내</a></li>
-            <li><a href="">회원등급 안내</a></li>
-          </ul>
-        </div>
-        <p class="service">
-          <span>고객센터</span>1522-7966 <br />
-          OPEN AM 10:00 - PM 5:00 (점심시간 : 12:00 ~ 13:00) <br />
-          SAT, SUN, HOLIDAY OFF.
-        </p>
-        <p class="deposit">
-          <span>입금계좌</span>국민 928737-01-025399 예금주 : (주)집꾸미기
-        </p>
+        <ul class="list">
+          <li class="news">
+            <p class="tit">집꾸미기 소식</p>
+            <ul>
+              <li><a href="">2021년 설 연휴 안내</a></li>
+              <li><a href="">개인정보 유출 관련해서 사과드립니다.</a></li>
+              <li><a href="">배송비 안내</a></li>
+              <li><a href="">증빙서류 발급 안내</a></li>
+              <li><a href="">2020년 추석 연휴 안내</a></li>
+
+              <li><a href="">구매확정 안내</a></li>
+              <li><a href="">교환, 반품 방법 안내</a></li>
+              <li><a href="">가구 배송 안내</a></li>
+              <li>
+                <a href="">개인정보 유출 관련 추가 업데이트 (2020.05.21)</a>
+              </li>
+              <li><a href="">적립금, 쿠폰 사용 안내</a></li>
+
+              <li><a href="">배송상태 및 취소,변경 안내</a></li>
+
+              <li><a href="">회원등급 안내</a></li>
+            </ul>
+          </li>
+          <li class="service">
+            <p class="tit">고객센터</p>
+            <span
+              >1522-7966 <br />
+              OPEN AM 10:00 - PM 5:00 (점심시간 : 12:00 ~ 13:00) <br />
+              SAT, SUN, HOLIDAY OFF.</span
+            >
+          </li>
+          <li class="deposit">
+            <p class="tit">입금계좌</p>
+            <span>국민 928737-01-025399 예금주 : (주)집꾸미기</span>
+          </li>
+        </ul>
       </div>
 
       <div class="btm_foot">
-        <div class="wrap1140">
-          <ul>
+        <div class="wrap1140 clearfix">
+          <ul class="foot_menu">
             <li><a href="">이용약관</a></li>
             <li><a href="">제휴문의</a></li>
             <li><a href="">입점문의</a></li>
@@ -527,7 +1689,11 @@
               이찬희(info@osquarecorp.com)
             </p>
             <p>copyright &copy;집꾸미기 all rights reserved.</p>
-            <p><img src="" alt="" /></p>
+            <p>
+              안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 KG
+              이니시스의 구매안전 서비스를 이용하실 수 있습니다.
+              <img src="img/foot_img.jpg" alt="" />
+            </p>
           </div>
           <div class="sns_box">
             <ul>
