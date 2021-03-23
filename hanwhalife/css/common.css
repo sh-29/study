@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* 웹폰트 */
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 200;
+  font-size: normal;
+  src: url('../../../../web/font/NotoSansKR-Light.eot');
+  src: url('../../../../web/font/NotoSansKR-Light.eot#iefix')
+      format('embedded-opentype'),
+    url('../../../../web/font/NotoSansKR-Light.woff2') format('woff2'),
+    url('../../../../web/font/NotoSansKR-Light.woff') format('woff'),
+    url('../../../../web/font/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 300;
+  font-size: normal;
+  src: url('../../../../web/font/NotoSansKR-DemiLight.eot');
+  src: url('../../../../web/font/NotoSansKR-DemiLight.eot#iefix')
+      format('embedded-opentype'),
+    url('../../../../web/font/NotoSansKR-DemiLight.woff2') format('woff2'),
+    url('../../../../web/font/NotoSansKR-DemiLight.woff') format('woff'),
+    url('../../../../web/font/NotoSansKR-DemiLight.otf') format('opentype');
+}
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: normal;
+  src: url('../../../../web/font/NotoSansKR-Regular.eot');
+  src: url('../../../../web/font/NotoSansKR-Regular.eot#iefix')
+      format('embedded-opentype'),
+    url('../../../../web/font/NotoSansKR-Regular.woff2') format('woff2'),
+    url('../../../../web/font/NotoSansKR-Regular.woff') format('woff'),
+    url('../../../../web/font/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: normal;
+  src: url('../../../../web/font/NotoSansKR-Medium.eot');
+  src: url('../../../../web/font/NotoSansKR-Medium.eot#iefix')
+      format('embedded-opentype'),
+    url('../../../../web/font/NotoSansKR-Medium.woff2') format('woff2'),
+    url('../../../../web/font/NotoSansKR-Medium.woff') format('woff'),
+    url('../../../../web/font/NotoSansKR-Medium.otf') format('opentype');
+}
+
+/* 태그초기화 tag reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 100%;
+}
+ul {
+  list-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+address {
+  font-style: normal;
+}
+header,
+nav,
+section,
+article,
+figure,
+figcaption,
+footer {
+  display: block;
+} /* div태그 대신 쓰는 시멘틱마크업 태그인데 display: block; 이 안되있어서 지정해줘야해 */
+
+/* 공통클래스 common */
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
+.p_r {
+  position: relative;
+}
+.p_a {
+  position: absolute;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: none;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+.area {
+  width: 1180px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.borderbox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* //여기까지 태그초기화, 공통클래스 */
+
+body {
+  font-family: NotoSansKR, '맑은 고딕', 'malgun gothic', sans-serif;
+  font-weight: 200;
+  color: #666;
+  line-height: 1;
+}
+
+/* 스킵 skip navigation */
+#skip a {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 1000;
+}
+#skip a:focus {
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #666;
+  color: #fff;
+}
+#wrap {
+  margin: 0 70px;
+  min-width: 1180px;
+}
+#header,
+#section,
+#banner,
+#footer {
+  max-width: 1763px;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+/* 헤더 header */
+#header {
+  position: relative;
+  height: 69px;
+  border-bottom: 1px solid #999;
+}
+#header.active::before {
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  background: #fff;
+}
+/* 스크립트에서 네비게이션에 마우스가 진입하거나 포커스가 가면 .active를 추가함 => 가상요소를 생성해서 흰 배경 처리 추가 */
+.logo {
+  left: 0;
+  top: 15px;
+}
+
+/* 여기부터 네비 */
+#gnb {
+  text-align: center;
+  font-weight: 300;
+  height: 69px;
+}
+#gnb > ul > li {
+  display: inline-block;
+  position: relative;
+}
+#gnb > ul > li + li {
+  margin-left: 73px;
+}
+#gnb > ul > li a {
+  display: block;
+}
+#gnb > ul > li > a {
+  height: 67px;
+  line-height: 67px;
+  border-bottom: 2px solid transparent;
+  font-size: 17px;
+  color: #333;
+}
+#gnb > ul > li:hover > a,
+#gnb > ul > li > a:focus,
+#gnb > ul > li.on > a {
+  color: #f15b47;
+  border-bottom-color: #f15b47;
+}
+#gnb > ul > li > ul {
+  position: absolute;
+  top: 69px;
+  left: 0;
+  width: 250px;
+  height: 49px;
+}
+/* #gnb > ul > li:nth-child(even) > ul {
+  background: pink;
+}
+ */
+#gnb > ul > li > ul > li {
+  float: left;
+}
+#gnb > ul > li > ul > li + li {
+  margin-left: 36px;
+}
+#gnb > ul > li > ul > li > a {
+  height: 49px;
+  line-height: 49px;
+  font-size: 14px;
+  color: #888;
+}
+#gnb > ul > li > ul > li:hover > a,
+#gnb > ul > li > ul > li > a :focus {
+  color: #333;
+}
+
+/* //여기까지 네비 */
+
+.quicklink {
+  right: 0;
+  top: 18px;
+  width: 100px;
+  height: 34px;
+  line-height: 30px;
+  border: 2px solid #f15b47;
+  padding-left: 10px;
+  font-size: 14px;
+  background: url(../images/common/icon_support_arrow.png) no-repeat right 10px
+    center;
+}
+/* footer */
+#footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 40px;
+  height: 80px;
+  font-size: 13px;
+}
+#footer div {
+  color: #888;
+} /* 배경과 글자사이의 명도 대비 4.5대1, 만약 확대기능이 있다면 3대1 까지 가능함 1. 인식의 용이성(Perceivable), 1.3 명료성, 1.3.3 텍스트 콘텐츠의 명도 대비 */
+#footer div address {
+  padding-bottom: 9px;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li:first-child {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 9px;
+}
+#footer ul li:first-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 13px;
+  background: #ccc;
+}
+.top_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  padding-top: 25px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: url('../images/common/icon_topBtn.png') no-repeat 50% 8px;
+}
+.top_btn:hover,
+.top_btn:focus {
+  background-color: pink;
+  color: #fff;
+}

@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* 모든 서브의 공통스타일 */
+.main_tit {
+  height: 260px;
+  color: #fff;
+  background: no-repeat center;
+  text-align: center;
+}
+
+.main_tit.about {
+  background-image: url('../images/about/tit_head_bg.jpg');
+}
+.main_tit.program {
+  background-image: url('../images/program/tit_head_bg.jpg');
+}
+.main_tit.recruit {
+  background-image: url('../images/recruit/tit_head_bg.jpg');
+}
+.main_tit.qna {
+  background-image: url('../images/qna/tit_head_bg.jpg');
+}
+
+.main_tit h2 {
+  font-size: 56px;
+  letter-spacing: -1px;
+  font-weight: 300;
+  padding: 77px 0 24px;
+}
+.main_tit p {
+  letter-spacing: -0.75px;
+}
+.sub_tit {
+  height: 90px;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 67px;
+}
+.sub_tit h3 {
+  text-align: center;
+  line-height: 90px;
+  font-size: 34px;
+  letter-spacing: -1.9px;
+  font-weight: 200;
+  color: #333;
+}
+.sub_tit a {
+  position: absolute;
+  top: 20px;
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+}
+.sub_tit a.prev {
+  left: 0;
+  padding-left: 65px;
+  background: url('../images/common/tit_menu_prev.png') no-repeat left center;
+}
+.sub_tit a.prev:hover,
+.sub_tit a.prev:focus {
+  background-image: url('../images/common/tit_menu_prev_on.png');
+}
+.sub_tit a.next {
+  right: 0;
+  padding-right: 65px;
+  background: url('../images/common/tit_menu_next.png') no-repeat right center;
+}
+.sub_tit a.next:hover,
+.sub_tit a.next:focus {
+  background-image: url('../images/common/tit_menu_next_on.png');
+}
+
+/* 1 about */
+.service_info {
+  height: 460px;
+  margin-bottom: 72px;
+  background: url('../images/about/service_intro_bg.jpg');
+  position: relative;
+}
+.red_bg {
+  position: absolute;
+  top: 72px;
+  left: 69px;
+  width: 360px;
+  height: 320px;
+  padding: 48px 0 30px 30px;
+  background: rgba(241, 91, 71, 0.9);
+  color: #fff;
+}
+.red_bg h4 span {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 13px 0 8px;
+  border-bottom: 2px solid #fff;
+}
+.red_bg p {
+  margin-top: 22px;
+  line-height: 26px;
+}
+.service_cnt {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 70px 0 26px;
+}
+.service_cnt h5 {
+  width: 400px;
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: -2px;
+  color: #333;
+  font-weight: 200;
+}
+.service_cnt ul {
+  width: calc(100% - 400px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.service_cnt ul li {
+  width: 50%;
+}
+.txt_list li {
+  position: relative;
+  padding: 0 0 40px 69px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.txt_list li span {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-size: 30px;
+  font-weight: 400;
+  color: #f15b47;
+}
+.txt_list li p {
+  line-height: 24px;
+}
+
+.img_list {
+  justify-content: space-between;
+}
+.img_list li:nth-child(even) {
+  padding-left: 18px;
+}
+.img_list li figcaption {
+  text-align: center;
+  letter-spacing: -1px;
+  padding: 17px 0 58px;
+}
+
+/* banner */
+#banner {
+  margin-top: 64px;
+}
+#banner ul {
+  display: flex;
+}
+#banner ul li {
+  width: 50%;
+  height: 220px;
+}
+#banner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#banner ul li:nth-child(1) a {
+  background: url('../images/common/aside01.jpg') no-repeat right;
+}
+#banner ul li:nth-child(2) a {
+  background: url('../images/common/aside02.jpg') no-repeat left;
+}
+
+/* 2 program */
+/* 3 recruit */
+/* 4 qna */
