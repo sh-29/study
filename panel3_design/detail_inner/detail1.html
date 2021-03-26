@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(90deg, #fcf6f4 20%, #8f999a 55%, #e5bba5);
+        overflow: hidden;
+      }
+      h1 {
+        width: 100%;
+        text-align: center;
+        padding: 40px 0 30px;
+        font-size: 20px;
+        color: #fff;
+        position: relative;
+      }
+      h1::before {
+        border: 1px solid #fff;
+        content: '';
+        display: block;
+        width: 40%;
+        height: 60px;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .list {
+        width: 1140px;
+        height: 86vh;
+        /* overflow: hidden; */
+        margin: 10px auto;
+        min-width: 1140px;
+      }
+      .list img {
+        width: 340px;
+        margin-right: 50px;
+        vertical-align: top;
+        transition: all 0.5s;
+      }
+      .list img.last {
+        margin-right: 0;
+      }
+      .list img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      #modal {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: auto;
+      }
+      #modal p {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 860px;
+        /* border: 1px solid #000; */
+      }
+      #modal p img {
+        width: 100%;
+      }
+      .closeBtn {
+        width: 60px;
+        height: 30px;
+        background: #fff;
+        border: none;
+        position: fixed;
+        right: 450px;
+        top: 20px;
+        font-weight: bold;
+      }
+      .closeBtn:hover {
+        background: #e5bba5;
+        cursor: pointer;
+      }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#modal, #modal p').hide();
+        $('.list img').on('click', function () {
+          $('#modal').fadeIn();
+          var view = $(this).attr('alt');
+          console.log(view);
+          $(view).fadeIn();
+        });
+        $('#modal .closeBtn').on('click', function () {
+          $('#modal, #modal p').fadeOut();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>각 상세페이지를 클릭하면 자세히 보실 수 있습니다.</h1>
+    <div class="list">
+      <img src="../images/detail1_view.jpg" alt=".detail1" />
+      <img src="../images/detail2_view.jpg" alt=".detail2" />
+      <img class="last" src="../images/detail3_view.jpg" alt=".detail3" />
+    </div>
+    <div id="modal">
+      <button type="button" class="closeBtn">닫기</button>
+      <p class="detail1">
+        <img src="../images/detail1.jpg" alt="비엔 와이드 4단 선반785" />
+      </p>
+      <p class="detail2">
+        <img src="../images/detail2.jpg" alt="타카타카 베개" />
+      </p>
+      <p class="detail3">
+        <img src="../images/detail3.jpg" alt="솔리엔 불박이장" />
+      </p>
+    </div>
+  </body>
+</html>
