@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 페이지</title>
+    <link rel="stylesheet" href="css/event.css" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //초기설정
+        var tabEle = $('.tab');
+        tabEle
+          .find('.event')
+          .css({ border: '1px solid #8b6026', color: '#8b6026' });
+        $('#banner_list').hide();
+
+        //탭메뉴 클릭했을 때
+        tabEle.find('a').on('click', function () {
+          var view = $(this).attr('href');
+          console.log(view);
+          $(view).css({ display: 'flex' });
+          $($(this).parent().siblings().children().attr('href')).css({
+            display: 'none',
+          });
+
+          //탭 버튼 색상 변경
+          $(this)
+            .parent()
+            .css({ border: '1px solid #8b6026', color: '#8b6026' });
+          $(
+            $(this)
+              .parent()
+              .siblings()
+              .css({ border: '1px solid #ccc', color: '#ccc' })
+          );
+        });
+        // 탭클릭
+      });
+    </script>
+  </head>
+  <body>
+    <header><img src="images/header.jpg" alt="" /></header>
+    <section>
+      <div class="wrap clearfix">
+        <h1>이벤트</h1>
+        <ul class="tab">
+          <li class="event"><a href="#event_list">이벤트 페이지</a></li>
+          <li class="banner"><a href="#banner_list">띠배너 디자인</a></li>
+        </ul>
+        <ul id="event_list" class="list">
+          <li><a href="event_inner/event1.html" target="_blink"></a></li>
+          <li><a href="event_inner/event2.html" target="_blink"></a></li>
+          <li><a href="event_inner/event3.html" target="_blink"></a></li>
+          <li><a href="event_inner/event4.html" target="_blink"></a></li>
+          <li><a href="event_inner/event5.html" target="_blink"></a></li>
+        </ul>
+        <ul id="banner_list" class="list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <img src="images/footer.jpg" alt="" />
+    </footer>
+  </body>
+</html>
